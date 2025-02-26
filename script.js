@@ -19,7 +19,6 @@ window.onload = function () {
 
   connection.addEventListener("message", function (message) {
     const data = JSON.parse(message.data);
-    console.log(data);
 
     if (data.type === "auth" && data.status === "ok") {
       subscribe();
