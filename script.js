@@ -2,6 +2,10 @@ window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   const sessionId = urlParams.get("session_id");
 
+  if (!sessionId) {
+    window.location = "https://octabyte.io";
+  }
+
   const progressBar = document.getElementById("progress-bar");
   const percentageBar = document.getElementById("percentage-bar");
 
