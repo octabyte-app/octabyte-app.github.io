@@ -43,7 +43,10 @@ window.onload = function () {
     percentageBar.textContent = `${value}%`;
 
     if (value == 100) {
-      window.location = data.service_domain;
+      const url = data.service_url || data.service_domain;
+      if (url) {
+        window.location = url.includes("http") ? url : `https://${url}`;
+      }
     }
   }
 
