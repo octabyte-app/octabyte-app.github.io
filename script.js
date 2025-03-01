@@ -41,6 +41,7 @@ window.onload = function () {
     const value = data.progress;
     progressBar.value = value;
     percentageBar.textContent = `${value}%`;
+    document.title = `${value}% Deploying app... | OctaByte`;
 
     if (value == 100) {
       const url = data.service_url || data.service_domain;
